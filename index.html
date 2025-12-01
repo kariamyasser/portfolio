@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kareem Gabr - Senior Frontend Engineer specializing in Angular, React, and modern web applications. 5+ years of experience in building scalable, high-performance solutions.">
+    <meta name="keywords" content="Frontend Engineer, Angular, React, Web Development, UI/UX, Micro Frontends">
+    <meta name="author" content="Kareem Gabr">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kareem Gabr | Senior Frontend Engineer">
+    <meta property="og:description" content="Crafting exceptional web experiences with Angular & React">
+    <meta property="og:type" content="website">
+    
+    <title>Kareem Gabr | Senior Frontend Engineer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Inter for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- JetBrains Mono for code/tech headers -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Fira Code (alternative coding font with ligatures) -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Space Mono (another great option) -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Devicon for Technology Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA4 ID
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">KG</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+<!--                 <li><a href="#blog" class="nav-link">Blog</a></li> -->
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                </button>
+                
+                <!-- Resume Download -->
+                <a href="assets/Kareem_Gabr_Resume.pdf" download class="btn-download" aria-label="Download Resume">
+                    <i class="fas fa-download"></i>
+                    <span>Resume</span>
+                </a>
+                
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for opportunities
+                </div>
+                
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Kareem Gabr</span>
+                </h1>
+                
+                <h2 class="hero-subtitle">
+                    Senior Frontend Engineer
+                </h2>
+                
+                <p class="hero-description">
+                    Crafting exceptional web experiences with <strong>Angular</strong> & <strong>React</strong>. 
+                    Specialized in building scalable, high-performance applications with 5+ years of expertise 
+                    in micro frontends, data visualization, and modern web architecture.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>90%</h3>
+                        <p>Build Time Reduction</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Code Coverage</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="window-content">
+                        <pre><code><span class="code-keyword">const</span> <span class="code-variable">engineer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">'Kareem Gabr'</span>,
+  <span class="code-property">role</span>: <span class="code-string">'Senior Frontend Engineer'</span>,
+  <span class="code-property">expertise</span>: [
+    <span class="code-string">'Angular'</span>,
+    <span class="code-string">'React'</span>,
+    <span class="code-string">'Micro Frontends'</span>,
+    <span class="code-string">'Performance Optimization'</span>
+  ],
+  <span class="code-property">impact</span>: {
+    <span class="code-property">buildTime</span>: <span class="code-string">'↓ 90%'</span>,
+    <span class="code-property">bundleSize</span>: <span class="code-string">'↓ 73%'</span>,
+    <span class="code-property">userEngagement</span>: <span class="code-string">'↑ 40%'</span>
+  }
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get To Know Me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="assets/A7404878.png" alt="Kareem Gabr">
+                        <div class="image-border"></div>
+                    </div>
+                    
+                    <div class="floating-card">
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <h4>5+ Years</h4>
+                            <p>Professional Experience</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <p class="lead">
+                        I'm a <strong>Senior Frontend Engineer</strong> passionate about creating 
+                        elegant solutions to complex problems. Based in Cairo, Egypt, I specialize 
+                        in building modern, scalable web applications that deliver exceptional user experiences.
+                    </p>
+                    
+                    <p>
+                        Currently at <strong>Siemens Digital Industries Software</strong>, I lead architectural 
+                        improvements and drive innovation in frontend development. My expertise spans from 
+                        implementing micro frontends and framework-agnostic component libraries to optimizing 
+                        application performance and mentoring development teams.
+                    </p>
+                    
+                    <p>
+                        I've successfully reduced build times by <strong>90%</strong>, improved user engagement 
+                        by <strong>40%</strong>, and achieved <strong>100% code coverage</strong> through automated 
+                        testing. Beyond code, I'm committed to knowledge sharing and fostering collaborative 
+                        environments where teams thrive.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Micro Frontend Architecture Expert</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Performance Optimization Specialist</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Team Leadership & Mentoring</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Cross-Functional Collaboration</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-languages">
+                        <h4>Languages</h4>
+                        <div class="language-tags">
+                            <span class="tag">🇬🇧 English - Bilingual</span>
+                            <span class="tag">🇪🇬 Arabic - Native</span>
+                            <span class="tag">🇫🇷 French - Conversational</span>
+                            <span class="tag">🇯🇵 Japanese - N5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section - FIXED WITH ICONS -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">My Expertise</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-description">
+                    A comprehensive toolkit of modern technologies and frameworks I use to build exceptional web applications
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Frontend Frameworks -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Frontend Frameworks</h3>
+                    </div>
+                    <div class="skills-icons">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-angularjs-plain colored"></i>
+                            </div>
+                            <span>Angular</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-react-original colored"></i>
+                            </div>
+                            <span>React</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-nextjs-original"></i>
+                            </div>
+                            <span>Next.js</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-vuejs-plain colored"></i>
+                            </div>
+                            <span>Vue.js</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Languages -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skills-icons">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-typescript-plain colored"></i>
+                            </div>
+                            <span>TypeScript</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-javascript-plain colored"></i>
+                            </div>
+                            <span>JavaScript</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-html5-plain colored"></i>
+                            </div>
+                            <span>HTML5</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-css3-plain colored"></i>
+                            </div>
+                            <span>CSS3</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-sass-original colored"></i>
+                            </div>
+                            <span>SASS/SCSS</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-python-plain colored"></i>
+                            </div>
+                            <span>Python</span>
+                            <div class="skill-level intermediate"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- State Management & Libraries -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <h3>State Management</h3>
+                    </div>
+                    <div class="skills-icons">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-redux-original colored"></i>
+                            </div>
+                            <span>Redux</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-rxjs-plain colored"></i>
+                            </div>
+                            <span>RxJS</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>NgRx</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <span>React Query</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Styling & UI -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Styling & UI</h3>
+                    </div>
+                    <div class="skills-icons">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-tailwindcss-plain colored"></i>
+                            </div>
+                            <span>Tailwind CSS</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-bootstrap-plain colored"></i>
+                            </div>
+                            <span>Bootstrap</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <span>Styled Components</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-materialui-plain colored"></i>
+                            </div>
+                            <span>Material UI</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testing -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <h3>Testing & Quality</h3>
+                    </div>
+                    <div class="skills-icons">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-jest-plain colored"></i>
+                            </div>
+                            <span>Jest</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-jasmine-plain colored"></i>
+                            </div>
+                            <span>Jasmine</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span>Karma</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-storybook-plain colored"></i>
+                            </div>
+                            <span>Storybook</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DevOps & Tools -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>DevOps & Tools</h3>
+                    </div>
+                    <div class="skills-icons">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-git-plain colored"></i>
+                            </div>
+                            <span>Git</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-docker-plain colored"></i>
+                            </div>
+                            <span>Docker</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-jenkins-plain colored"></i>
+                            </div>
+                            <span>Jenkins</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-googlecloud-plain colored"></i>
+                            </div>
+                            <span>GCP</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-nginx-original colored"></i>
+                            </div>
+                            <span>Nginx</span>
+                            <div class="skill-level intermediate"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-webpack-plain colored"></i>
+                            </div>
+                            <span>Webpack</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Databases -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skills-icons">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-postgresql-plain colored"></i>
+                            </div>
+                            <span>PostgreSQL</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-mysql-plain colored"></i>
+                            </div>
+                            <span>MySQL</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-firebase-plain colored"></i>
+                            </div>
+                            <span>Firebase</span>
+                            <div class="skill-level intermediate"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-graphql-plain colored"></i>
+                            </div>
+                            <span>GraphQL</span>
+                            <div class="skill-level intermediate"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Design Tools -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>Design & UI/UX</h3>
+                    </div>
+                    <div class="skills-icons">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-figma-plain colored"></i>
+                            </div>
+                            <span>Figma</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="devicon-photoshop-plain colored"></i>
+                            </div>
+                            <span>Photoshop</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <span>Responsive Design</span>
+                            <div class="skill-level expert"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-universal-access"></i>
+                            </div>
+                            <span>Accessibility</span>
+                            <div class="skill-level advanced"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skill Level Legend -->
+            <div class="skill-legend">
+                <div class="legend-item">
+                    <div class="legend-bar expert"></div>
+                    <span>Expert (5+ years)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-bar advanced"></div>
+                    <span>Advanced (3-5 years)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-bar intermediate"></div>
+                    <span>Intermediate (1-3 years)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Career Journey</span>
+                <h2 class="section-title">Work Experience</h2>
+            </div>
+            
+            <div class="timeline">
+                <!-- Siemens -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Senior Frontend Engineer</h3>
+                                <h4>Siemens Digital Industries Software</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Feb 2020 - Present</span>
+                                <span class="timeline-location">
+                                    <i class="fas fa-map-marker-alt"></i> Cairo, Egypt
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <ul class="timeline-achievements">
+                            <li>
+                                <i class="fas fa-rocket"></i>
+                                Led architectural improvements and large-scale refactoring of legacy codebases, 
+                                improving maintainability and performance
+                            </li>
+                            <li>
+                                <i class="fas fa-chart-bar"></i>
+                                Developed interactive data visualization features for Questa Verification IQ, 
+                                increasing user engagement by <strong>40%</strong> and reducing analysis time by <strong>55%</strong>
+                            </li>
+                            <li>
+                                <i class="fas fa-puzzle-piece"></i>
+                                Created a cross-framework plugin generator using Micro Frontends for React, Vue.js, 
+                                and Angular integration
+                            </li>
+                            <li>
+                                <i class="fas fa-tachometer-alt"></i>
+                                Reduced build time by <strong>90%</strong> and bundle size by <strong>73%</strong> through 
+                                code splitting and tree shaking optimizations
+                            </li>
+                            <li>
+                                <i class="fas fa-shield-alt"></i>
+                                Implemented automated tests achieving <strong>100% code coverage</strong> and reducing 
+                                production issues by <strong>83%</strong>
+                            </li>
+                            <li>
+                                <i class="fas fa-sync-alt"></i>
+                                Migrated Coverage Analyzer from Angular 2 to Angular 18 with zero data loss and 
+                                critical performance enhancements
+                            </li>
+                            <li>
+                                <i class="fas fa-users"></i>
+                                Mentored junior developers and conducted knowledge-sharing sessions on emerging 
+                                frontend technologies
+                            </li>
+                        </ul>
+                        
+                        <div class="timeline-tech">
+                            <span>Angular</span>
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Micro Frontends</span>
+                            <span>D3.js</span>
+                            <span>Vite</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- MDC Freelance -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Freelance Frontend Engineer</h3>
+                                <h4>Microfilm and Documentation Center (MDC)</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Jun 2021 - Mar 2022</span>
+                                <span class="timeline-location">
+                                    <i class="fas fa-map-marker-alt"></i> Cairo, Egypt
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <ul class="timeline-achievements">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Collaborated with a team of 3 developers to deliver an ERP system using React and Redux 
+                                on time, under budget, with <strong>100% bug-free launch</strong>
+                            </li>
+                            <li>
+                                <i class="fas fa-cubes"></i>
+                                Created a shared component library for reuse across different system modules, 
+                                increasing efficiency by <strong>20%</strong>
+                            </li>
+                            <li>
+                                <i class="fas fa-search"></i>
+                                Built a search engine for archives using Angular frontend and Node.js backend
+                            </li>
+                            <li>
+                                <i class="fas fa-magic"></i>
+                                Leveraged JavaScript to create interactive components and animations, 
+                                improving user experience
+                            </li>
+                        </ul>
+                        
+                        <div class="timeline-tech">
+                            <span>React</span>
+                            <span>Redux</span>
+                            <span>Angular</span>
+                            <span>Node.js</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ITSC Intern -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Full Stack Developer Intern</h3>
+                                <h4>ITSC - Egypt</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Jun 2019 - Oct 2019</span>
+                                <span class="timeline-location">
+                                    <i class="fas fa-map-marker-alt"></i> Cairo, Egypt
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <ul class="timeline-achievements">
+                            <li>
+                                <i class="fas fa-server"></i>
+                                Maintained frontend for several ports integrating Ministry of Tourism with 
+                                Ministry of Internal Affairs
+                            </li>
+                            <li>
+                                <i class="fas fa-sitemap"></i>
+                                Implemented software engineering architecture and design patterns
+                            </li>
+                            <li>
+                                <i class="fas fa-mobile-alt"></i>
+                                Developed modular, single-page web application in Angular with responsive design principles
+                            </li>
+                            <li>
+                                <i class="fas fa-plug"></i>
+                                Incorporated third-party APIs for data exchange and real-time updates
+                            </li>
+                        </ul>
+                        
+                        <div class="timeline-tech">
+                            <span>Angular</span>
+                            <span>TypeScript</span>
+                            <span>REST APIs</span>
+                            <span>Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Featured Work</span>
+                <h2 class="section-title">Projects & Achievements</h2>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="angular">Angular</button>
+                <button class="filter-btn" data-filter="react">React</button>
+                <button class="filter-btn" data-filter="performance">Performance</button>
+                <button class="filter-btn" data-filter="architecture">Architecture</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1: Questa Verification IQ -->
+                <div class="project-card" data-category="angular performance architecture">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop" alt="Questa Verification IQ">
+                        <div class="project-overlay">
+                            <button class="btn-icon" onclick="openProjectModal('project1')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Angular</span>
+                            <span>Performance</span>
+                            <span>Micro Frontends</span>
+                        </div>
+                        <h3>Questa Verification IQ Enhancement</h3>
+                        <p>
+                            Led UI/UX refactoring and performance optimization, reducing build time by 90% 
+                            and bundle size by 73% while increasing user engagement by 40%.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <strong>90%</strong>
+                                <span>Build Time ↓</span>
+                            </div>
+                            <div class="metric">
+                                <strong>73%</strong>
+                                <span>Bundle Size ↓</span>
+                            </div>
+                            <div class="metric">
+                                <strong>40%</strong>
+                                <span>Engagement ↑</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Cross-Framework Plugin Generator -->
+                <div class="project-card" data-category="react angular architecture">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=800&fit=crop" alt="Plugin Generator">
+                        <div class="project-overlay">
+                            <button class="btn-icon" onclick="openProjectModal('project2')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Micro Frontends</span>
+                            <span>React</span>
+                            <span>Vue</span>
+                            <span>Angular</span>
+                        </div>
+                        <h3>Cross-Framework Plugin Generator</h3>
+                        <p>
+                            Architected a framework-agnostic plugin system enabling seamless integration 
+                            of React, Vue, and Angular components using Micro Frontend architecture.
+                        </p>
+                        <div class="project-highlights">
+                            <span><i class="fas fa-check"></i> Framework Agnostic</span>
+                            <span><i class="fas fa-check"></i> Micro Frontend Architecture</span>
+                            <span><i class="fas fa-check"></i> Seamless Integration</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Data Visualization Platform -->
+                <div class="project-card" data-category="angular react">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&sat=-100" alt="Data Visualization">
+                        <div class="project-overlay">
+                            <button class="btn-icon" onclick="openProjectModal('project3')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>D3.js</span>
+                            <span>Data Viz</span>
+                            <span>Angular</span>
+                        </div>
+                        <h3>Interactive Data Visualization</h3>
+                        <p>
+                            Developed interactive data visualization features that increased user engagement 
+                            by 40% and reduced analysis time by 55%.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <strong>40%</strong>
+                                <span>Engagement ↑</span>
+                            </div>
+                            <div class="metric">
+                                <strong>55%</strong>
+                                <span>Time Saved</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Angular Migration -->
+                <div class="project-card" data-category="angular performance">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=800&fit=crop" alt="Angular Migration">
+                        <div class="project-overlay">
+                            <button class="btn-icon" onclick="openProjectModal('project4')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Angular 18</span>
+                            <span>Migration</span>
+                            <span>Performance</span>
+                        </div>
+                        <h3>Coverage Analyzer Migration</h3>
+                        <p>
+                            Successfully migrated Coverage Analyzer from Angular 2 to Angular 18 with 
+                            zero data loss and critical performance enhancements.
+                        </p>
+                        <div class="project-highlights">
+                            <span><i class="fas fa-check"></i> 0% Data Loss</span>
+                            <span><i class="fas fa-check"></i> Performance Enhanced</span>
+                            <span><i class="fas fa-check"></i> Angular 2 → 18</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5: ERP System -->
+                <div class="project-card" data-category="react">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop" alt="ERP System">
+                        <div class="project-overlay">
+                            <button class="btn-icon" onclick="openProjectModal('project5')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Redux</span>
+                            <span>ERP</span>
+                        </div>
+                        <h3>Enterprise ERP System</h3>
+                        <p>
+                            Built a comprehensive ERP system using React and Redux, delivered on time 
+                            with 100% bug-free launch and 20% efficiency increase.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <strong>100%</strong>
+                                <span>Bug-Free</span>
+                            </div>
+                            <div class="metric">
+                                <strong>20%</strong>
+                                <span>Efficiency ↑</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6: Chrome Extension -->
+                <div class="project-card" data-category="performance">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=800&fit=crop" alt="Chrome Extension">
+                        <div class="project-overlay">
+                            <button class="btn-icon" onclick="openProjectModal('project6')">
+                                <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Chrome Extension</span>
+                            <span>Performance</span>
+                            <span>DevTools</span>
+                        </div>
+                        <h3>API Performance Monitor</h3>
+                        <p>
+                            Developed a Chrome extension to detect and report redundant API calls during 
+                            development and testing, improving application efficiency.
+                        </p>
+                        <div class="project-highlights">
+                            <span><i class="fas fa-check"></i> Real-time Detection</span>
+                            <span><i class="fas fa-check"></i> Developer Tool</span>
+                            <span><i class="fas fa-check"></i> Performance Insights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications - FIXED WITH DATA -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Academic Background</span>
+                <h2 class="section-title">Education & Certifications</h2>
+            </div>
+            
+            <div class="education-grid">
+                <!-- Education -->
+                <div class="education-card featured">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Bachelor of Communication and Computer Engineering</h3>
+                        <h4>Cairo University, Faculty of Engineering</h4>
+                        <div class="card-meta">
+                            <span><i class="fas fa-calendar"></i> Graduated June 2020</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Giza, Egypt</span>
+                            <span class="gpa"><i class="fas fa-star"></i> GPA: 3.3</span>
+                        </div>
+                        <p class="card-description">
+                            Comprehensive engineering education covering software development, algorithms, 
+                            data structures, computer networks, and system design.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <div class="education-card">
+                    <div class="card-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Complete Web & Mobile Designer</h3>
+                        <h4>UI/UX, Figma, +more</h4>
+                        <div class="card-meta">
+                            <span><i class="fas fa-calendar"></i> March 2023</span>
+                            <span class="platform">Udemy</span>
+                        </div>
+                        <p class="card-description">
+                            Advanced UI/UX design principles, Figma mastery, responsive design, 
+                            and modern design systems.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="card-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Advanced Frontend Development Nanodegree</h3>
+                        <h4>React Specialization</h4>
+                        <div class="card-meta">
+                            <span><i class="fas fa-calendar"></i> January 2021</span>
+                            <span class="platform">Udacity</span>
+                        </div>
+                        <p class="card-description">
+                            In-depth React training covering hooks, context, Redux, performance optimization, 
+                            and modern React patterns.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="card-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Angular - The Complete Guide</h3>
+                        <h4>Comprehensive Angular Training</h4>
+                        <div class="card-meta">
+                            <span><i class="fas fa-calendar"></i> September 2019</span>
+                            <span class="platform">Udemy</span>
+                        </div>
+                        <p class="card-description">
+                            Complete Angular framework mastery including components, services, routing, 
+                            RxJS, and state management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-description">
+                    Have a project in mind or want to discuss opportunities? 
+                    I'm always open to new challenges and collaborations.
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:karim.yasser.ahmed@gmail.com">karim.yasser.ahmed@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+201141913988">+20 114 191 3988</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Cairo, Egypt</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/kariamyasser" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kareem-gabr-36a80119b/" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:karim.yasser.ahmed@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Kareem Gabr</h3>
+                    <p>Senior Frontend Engineer crafting exceptional web experiences</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/kariamyasser" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/kareem-gabr-36a80119b/" target="_blank">LinkedIn</a></li>
+                            <li><a href="mailto:karim.yasser.ahmed@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kareem Gabr. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart"></i> using HTML, CSS & JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
