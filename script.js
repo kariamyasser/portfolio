@@ -92,6 +92,11 @@ themeToggle.addEventListener('click', () => {
             'theme': newTheme
         });
     }
+
+    requestAnimationFrame(()=> {
+        positionLoader();
+        appleTextAnimation("Kareem Gabr", "animatedName");
+    });
 });
 
 // ===================================
@@ -114,50 +119,60 @@ window.addEventListener('scroll', () => {
 // APPLE-STYLE NAME ANIMATION
 // ===================================
 
-const finalText = "Kareem Gabr";
-const chars = "AB#$%CDLuvwxyMNOPQRSTEFGHIZa%bcd012efghijklmnopqrstuvwxyz345JKLMNOPQRSTUVWXY6789!@#$%&?";
-const textEl = document.getElementById("animatedName");
 
-let output = Array(finalText.length).fill("");
-let revealed = Array(finalText.length).fill(false);
+function appleTextAnimation(text, elementId, options = {}) {
+  const chars = options.chars || "AB#$%CDLuvwxyMNOPQRSTEFGHIZa%bcd012efghijklmnopqrstuvwxyz345JKLMNOPQRSTUVWXY6789!@#$%&?";
+  const letterDelay = options.letterDelay || 120;
+  const frameDelay = options.frameDelay || 50;
+  const cyclesMin = options.cyclesMin || 6;
+  const cyclesMax = options.cyclesMax || 12;
+  
+  const textEl = document.getElementById(elementId);
+  
+  if (!textEl) {
+    console.error(`Element with id "${elementId}" not found`);
+    return;
+  }
 
-function randomChar() {
-  return chars[Math.floor(Math.random() * chars.length)];
-}
+  const output = Array(text.length).fill("");
+  const revealed = Array(text.length).fill(false);
 
-function animateLetter(i) {
-  let cycles = 0;
-  const maxCycles = 6 + Math.random() * 6; // vary per letter for realism
+  function randomChar() {
+    return chars[Math.floor(Math.random() * chars.length)];
+  }
 
-  const interval = setInterval(() => {
-    if (revealed[i]) {
-      clearInterval(interval);
-      return;
-    }
+  function animateLetter(i) {
+    let cycles = 0;
+    const maxCycles = cyclesMin + Math.random() * (cyclesMax - cyclesMin);
 
-    output[i] = randomChar();
-    textEl.textContent = output.join("");
+    const interval = setInterval(() => {
+      if (revealed[i]) {
+        clearInterval(interval);
+        return;
+      }
 
-    cycles++;
-    if (cycles > maxCycles) {
-      revealed[i] = true;
-      output[i] = finalText[i];
+      output[i] = randomChar();
       textEl.textContent = output.join("");
-      clearInterval(interval);
-    }
-  }, 50);
-}
 
-function appleTextAnimation() {
-  [...finalText].forEach((_, i) => {
-    setTimeout(() => animateLetter(i), i * 120); // stagger letters like Apple
+      cycles++;
+      if (cycles > maxCycles) {
+        revealed[i] = true;
+        output[i] = text[i];
+        textEl.textContent = output.join("");
+        clearInterval(interval);
+      }
+    }, frameDelay);
+  }
+
+  [...text].forEach((_, i) => {
+    setTimeout(() => animateLetter(i), i * letterDelay);
   });
 }
 
 
 // Run animation on page load
 window.addEventListener('load', () => {
-    requestAnimationFrame(appleTextAnimation);
+    requestAnimationFrame(appleTextAnimation("Kareem Gabr", "animatedName"));
 });
 
 // ===================================
@@ -467,13 +482,17 @@ function typeWriter(element, text, speed = 100) {
 // Optional: Add typing effect to subtitle
 // Uncomment if you want this effect
 
-window.addEventListener('load', () => {
+
+function positionLoader(){
     const subtitle = document.querySelector('.hero-subtitle');
     if (subtitle) {
+        subtitle.textContent = '';
         const text = 'Senior Frontend Engineer';
         typeWriter(subtitle, text, 80);
     }
-});
+}
+
+window.addEventListener('load', () => requestAnimationFrame(positionLoader));
 
 
 // ===================================
@@ -574,6 +593,73 @@ window.addEventListener('load', () => {
             'event_category': 'Performance'
         });
     }
+});
+
+// Add to your existing script.js file
+
+// ===================================
+// SHOOTING STARS ANIMATION
+// ===================================
+
+class ShootingStarManager {
+    constructor() {
+        this.container = document.querySelector('.shooting-stars-layout');
+        this.maxStars = window.innerWidth < 768 ? 2 : 5;
+        this.activeStars = 0;
+        this.isVisible = true;
+        
+        if (this.container) this.init();
+    }
+    
+    init() {
+        document.addEventListener('visibilitychange', () => {
+            this.isVisible = !document.hidden;
+        });
+        
+        this.startAnimation();
+    }
+    
+    createStar() {
+        if (!this.isVisible || this.activeStars >= this.maxStars) return;
+        
+        this.activeStars++;
+        
+        const star = document.createElement('div');
+        star.className = 'shooting-star';
+        
+        star.style.left = `${Math.random() * 60}%`;
+        star.style.top = `${Math.random() * 60}%`;
+        
+        const speeds = ['fast', 'medium', 'slow'];
+        const colors = ['', 'blue', 'purple', 'pink'];
+        
+        star.classList.add(speeds[Math.floor(Math.random() * speeds.length)]);
+        
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        if (color) star.classList.add(color);
+        
+        this.container.appendChild(star);
+        
+        star.addEventListener('animationend', () => {
+            star.remove();
+            this.activeStars--;
+        });
+    }
+    
+    startAnimation() {
+        setInterval(() => {
+            if (Math.random() > 0.4) this.createStar();
+        }, 2000);
+        
+        for (let i = 0; i < 3; i++) {
+            setTimeout(() => this.createStar(), i * 800);
+        }
+    }
+}
+
+// Initialize shooting stars
+document.addEventListener('DOMContentLoaded', () => {
+    new ShootingStarManager();
 });
 
 // ===================================
