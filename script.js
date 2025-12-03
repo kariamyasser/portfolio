@@ -464,6 +464,9 @@ if (window.innerWidth > 1024) {
 // TYPING EFFECT FOR HERO SUBTITLE
 // ===================================
 
+// Store the timeout ID globally so we can cancel it
+let typewriterTimeout = null;
+
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.textContent = '';
@@ -472,20 +475,22 @@ function typeWriter(element, text, speed = 100) {
         if (i < text.length) {
             element.textContent += text.charAt(i);
             i++;
-            setTimeout(type, speed);
+            typewriterTimeout = setTimeout(type, speed);
         }
     }
     
     type();
 }
 
-// Optional: Add typing effect to subtitle
-// Uncomment if you want this effect
-
-
-function positionLoader(){
+function positionLoader() {
     const subtitle = document.querySelector('.hero-subtitle');
     if (subtitle) {
+        // Cancel any ongoing typewriter animation
+        if (typewriterTimeout) {
+            clearTimeout(typewriterTimeout);
+            typewriterTimeout = null;
+        }
+        
         subtitle.textContent = '';
         const text = 'Senior Frontend Engineer';
         typeWriter(subtitle, text, 80);
@@ -493,6 +498,7 @@ function positionLoader(){
 }
 
 window.addEventListener('load', () => requestAnimationFrame(positionLoader));
+
 
 
 // ===================================
