@@ -1791,6 +1791,8 @@ body {
     --gray: #475569;
     --gray-light: #334155;
     --gradient-text-shadow: 0;
+    --primary: #0099cc; 
+     --primary-light: #0099cc; 
 }
 
 [data-theme="light"] body {
