@@ -198,11 +198,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===================================
-// PROJECT FILTERS
+// PROJECT FILTERS - ENHANCED
 // ===================================
 
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
+const featuredProjects = document.querySelectorAll('.featured-project');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -213,21 +214,50 @@ filterButtons.forEach(button => {
         
         const filterValue = button.getAttribute('data-filter');
         
+        // Filter regular project cards
         projectCards.forEach(card => {
-            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+            const categories = card.getAttribute('data-category').split(' ');
+            
+            if (filterValue === 'all' || categories.includes(filterValue)) {
                 card.style.display = 'block';
                 setTimeout(() => {
                     card.style.opacity = '1';
-                    card.style.transform = 'scale(1)';
+                    card.style.transform = 'translateY(0)';
                 }, 10);
             } else {
                 card.style.opacity = '0';
-                card.style.transform = 'scale(0.8)';
+                card.style.transform = 'translateY(20px)';
                 setTimeout(() => {
                     card.style.display = 'none';
                 }, 300);
             }
         });
+        
+        // Filter featured projects
+        featuredProjects.forEach(project => {
+            const categories = project.getAttribute('data-category').split(' ');
+            
+            if (filterValue === 'all' || categories.includes(filterValue)) {
+                project.style.display = 'grid';
+                setTimeout(() => {
+                    project.style.opacity = '1';
+                    project.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                project.style.opacity = '0';
+                project.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    project.style.display = 'none';
+                }, 300);
+            }
+        });
+        
+        // Track filter change in analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'filter_projects', {
+                'filter_type': filterValue
+            });
+        }
     });
 });
 
@@ -370,96 +400,177 @@ if (typeof gsap !== 'undefined') {
     });
 }
 
+
 // ===================================
-// CONTACT FORM VALIDATION
+// WEB3FORMS CONTACT FORM INTEGRATION
 // ===================================
+// Add this at the top of your script.js
+let formLoadTime = Date.now();
 
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Get form values
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const subject = document.getElementById('subject').value.trim();
-        const message = document.getElementById('message').value.trim();
+        const formData = new FormData(contactForm);
         
-        // Simple validation
-        if (!name || !email || !subject || !message) {
-            alert('Please fill in all fields');
+        // ===================================
+        // ADVANCED BOT CHECKS
+        // ===================================
+        
+        // 1. Honeypot Check
+        const botcheck = formData.get('botcheck');
+        if (botcheck) {
+            console.warn('Bot detected (honeypot)! Form submission blocked.');
+            showNotification('⚠️ Suspicious activity detected.', 'error');
             return;
         }
         
-        // Email validation
+        // 2. Time-Based Check (bots submit too fast)
+        const timeSinceLoad = Date.now() - formLoadTime;
+        if (timeSinceLoad < 2000) { // Less than 2 seconds
+            console.warn('Bot detected (too fast)! Form submission blocked.');
+            showNotification('⚠️ Please take your time filling out the form.', 'error');
+            return;
+        }
+        
+        // 3. Check if all required fields are filled
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+        
+        if (!name || !email || !message) {
+            showNotification('⚠️ Please fill in all required fields.', 'error');
+            return;
+        }
+        
+        // 4. Basic email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address');
+            showNotification('⚠️ Please enter a valid email address.', 'error');
             return;
         }
         
-        // If validation passes, you can send the form data
-        console.log('Form submitted:', { name, email, subject, message });
+        // Add access key from config
+        formData.append('access_key', CONFIG.WEB3FORMS_ACCESS_KEY);
         
-        // Show success message
-        alert('Thank you for your message! I will get back to you soon.');
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
         
-        // Reset form
-        contactForm.reset();
+        submitBtn.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
         
-        // Here you would typically send the data to a server
-        // Example: fetch('/api/contact', { method: 'POST', body: JSON.stringify({ name, email, subject, message }) })
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                showNotification('✅ Thank you! Your message has been sent successfully.', 'success');
+                contactForm.reset();
+                formLoadTime = Date.now(); // Reset timer after successful submission
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'Contact',
+                        'event_label': 'Contact Form Submission'
+                    });
+                }
+            } else {
+                throw new Error(data.message || 'Submission failed');
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            showNotification('❌ Oops! There was a problem sending your message. Please try again or email me directly.', 'error');
+        } finally {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+        }
     });
 }
 
 // ===================================
-// CURSOR FOLLOWER (Desktop only)
+// NOTIFICATION SYSTEM
 // ===================================
 
-if (window.innerWidth > 1024) {
-    const cursorFollower = document.querySelector('.cursor-follower');
+function showNotification(message, type = 'info') {
+    // Remove any existing notifications
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
     
-    if (cursorFollower) {
-        let mouseX = 0;
-        let mouseY = 0;
-        let cursorX = 0;
-        let cursorY = 0;
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.innerHTML = `
+        <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+        <span>${message}</span>
+        <button class="notification-close" onclick="this.parentElement.remove()">
+            <i class="fas fa-times"></i>
+        </button>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Trigger animation
+    setTimeout(() => notification.classList.add('show'), 100);
+    
+    // Auto-remove after 6 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    }, 6000);
+}
+// ===================================
+// PARTICLE BURST TRAIL
+// ===================================
+
+/* if (window.innerWidth > 1024) {
+    const trailContainer = document.querySelector('.cursor-trail-container');
+    
+    if (trailContainer) {
+        let lastTrailTime = 0;
+        const trailDelay = 40;
+        const colors = ['color-red', 'color-orange', 'color-yellow', 'color-green', 'color-blue', 'color-purple', 'color-pink'];
+        const particles = ['particle-1', 'particle-2', 'particle-3', 'particle-4'];
         
         document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
+            const currentTime = Date.now();
+            
+            if (currentTime - lastTrailTime < trailDelay) return;
+            lastTrailTime = currentTime;
+            
+            // Create multiple particles in a burst
+            for (let i = 0; i < 4; i++) {
+                setTimeout(() => {
+                    const trail = document.createElement('div');
+                    trail.className = 'cursor-trail';
+                    trail.classList.add(particles[i]);
+                    trail.classList.add(colors[Math.floor(Math.random() * colors.length)]);
+                    
+                    trail.style.left = e.clientX + 'px';
+                    trail.style.top = e.clientY + 'px';
+                    
+                    trailContainer.appendChild(trail);
+                    
+                    setTimeout(() => trail.remove(), 800);
+                }, i * 10);
+            }
         });
         
-        function animateCursor() {
-            const speed = 0.2;
-            
-            cursorX += (mouseX - cursorX) * speed;
-            cursorY += (mouseY - cursorY) * speed;
-            
-            cursorFollower.style.left = cursorX + 'px';
-            cursorFollower.style.top = cursorY + 'px';
-            
-            requestAnimationFrame(animateCursor);
-        }
-        
-        animateCursor();
-        
-        // Scale cursor on hover
-        const hoverElements = document.querySelectorAll('a, button, .project-card, .blog-card');
-        
-        hoverElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                cursorFollower.style.transform = 'scale(2)';
-            });
-            
-            element.addEventListener('mouseleave', () => {
-                cursorFollower.style.transform = 'scale(1)';
-            });
-        });
+        // Cleanup
+        setInterval(() => {
+            const trails = trailContainer.querySelectorAll('.cursor-trail');
+            if (trails.length > 100) {
+                trails[0].remove();
+            }
+        }, 100);
     }
-}
-
+} */
 // ===================================
 // TYPING EFFECT FOR HERO SUBTITLE
 // ===================================
@@ -547,8 +658,6 @@ if (downloadBtn) {
 // PARTICLE BACKGROUND EFFECT (Optional)
 // ===================================
 
-// Uncomment if you want to add particle effect
-
 function createParticles() {
     const hero = document.querySelector('.hero');
     const particleCount = 50;
@@ -601,7 +710,6 @@ window.addEventListener('load', () => {
     }
 });
 
-// Add to your existing script.js file
 
 // ===================================
 // SHOOTING STARS ANIMATION

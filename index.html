@@ -49,6 +49,7 @@
     </script>
 </head>
 <body>
+    <!-- <div class="cursor-trail-container"></div> -->
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
@@ -812,210 +813,836 @@
             <div class="section-header">
                 <span class="section-label">Featured Work</span>
                 <h2 class="section-title">Projects & Achievements</h2>
+                <p class="section-description">
+                    A comprehensive showcase of professional work, open-source contributions, and personal projects
+                </p>
             </div>
-            
+    
+            <!-- Projects Stats Overview -->
+            <div class="projects-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">23+</h3>
+                        <p class="stat-label">Total Projects</p>
+                    </div>
+                </div>
+    
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">3</h3>
+                        <p class="stat-label">Companies</p>
+                    </div>
+                </div>
+    
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">90%</h3>
+                        <p class="stat-label">Build Time Reduction</p>
+                    </div>
+                </div>
+    
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">15+</h3>
+                        <p class="stat-label">Open Source</p>
+                    </div>
+                </div>
+            </div>
+    
             <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="angular">Angular</button>
-                <button class="filter-btn" data-filter="react">React</button>
-                <button class="filter-btn" data-filter="performance">Performance</button>
-                <button class="filter-btn" data-filter="architecture">Architecture</button>
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All Projects
+                </button>
+                <button class="filter-btn" data-filter="professional">
+                    <i class="fas fa-briefcase"></i> Professional
+                </button>
+                <button class="filter-btn" data-filter="opensource">
+                    <i class="fas fa-code-branch"></i> Open Source
+                </button>
+                <button class="filter-btn" data-filter="mobile">
+                    <i class="fas fa-mobile-alt"></i> Mobile
+                </button>
+                <button class="filter-btn" data-filter="tools">
+                    <i class="fas fa-tools"></i> Tools
+                </button>
+                <button class="filter-btn" data-filter="datascience">
+                    <i class="fas fa-chart-line"></i> Data Science
+                </button>
             </div>
-            
-            <div class="projects-grid">
-                <!-- Project 1: Questa Verification IQ -->
-                <div class="project-card" data-category="angular performance architecture">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop" alt="Questa Verification IQ">
+    
+            <!-- Featured Projects -->
+            <div class="featured-projects-section" id="featured-projects-section">
+                <h3 class="subsection-title">
+                    <i class="fas fa-star"></i> Featured Projects
+                </h3>
+    
+                <!-- Featured Project 1: Questa Verification IQ -->
+                <div class="featured-project" data-category="professional">
+                    <div class="featured-project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop"
+                            alt="Questa Verification IQ">
                         <div class="project-overlay">
-                            <button class="btn-icon" onclick="openProjectModal('project1')">
+                            <div class="overlay-content">
                                 <i class="fas fa-external-link-alt"></i>
-                            </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-content">
+    
+                    <div class="featured-project-content">
+                        <div class="project-labels">
+                            <span class="label-badge professional">Siemens Digital Industries</span>
+                            <span class="label-badge">2020 - Present</span>
+                        </div>
+    
+                        <h4 class="featured-project-title">Questa Verification IQ - Complete Platform Enhancement</h4>
+    
+                        <p class="featured-project-description">
+                            Led end-to-end architectural improvements and modernization of Siemens' flagship verification
+                            platform.
+                            Spearheaded UI/UX refactoring, developed interactive data visualizations, and architected a
+                            framework-agnostic
+                            component library with micro frontends architecture.
+                        </p>
+    
+                        <div class="project-achievements-grid">
+                            <div class="achievement-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>60% reduction in UI issues</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-users"></i>
+                                <span>40% user engagement increase</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>90% build time reduction</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-compress"></i>
+                                <span>73% bundle size reduction</span>
+                            </div>
+                        </div>
+    
                         <div class="project-tags">
                             <span>Angular</span>
-                            <span>Performance</span>
-                            <span>Micro Frontends</span>
-                        </div>
-                        <h3>Questa Verification IQ Enhancement</h3>
-                        <p>
-                            Led UI/UX refactoring and performance optimization, reducing build time by 90% 
-                            and bundle size by 73% while increasing user engagement by 40%.
-                        </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <strong>90%</strong>
-                                <span>Build Time ↓</span>
-                            </div>
-                            <div class="metric">
-                                <strong>73%</strong>
-                                <span>Bundle Size ↓</span>
-                            </div>
-                            <div class="metric">
-                                <strong>40%</strong>
-                                <span>Engagement ↑</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2: Cross-Framework Plugin Generator -->
-                <div class="project-card" data-category="react angular architecture">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=800&fit=crop" alt="Plugin Generator">
-                        <div class="project-overlay">
-                            <button class="btn-icon" onclick="openProjectModal('project2')">
-                                <i class="fas fa-external-link-alt"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span>Micro Frontends</span>
                             <span>React</span>
-                            <span>Vue</span>
-                            <span>Angular</span>
-                        </div>
-                        <h3>Cross-Framework Plugin Generator</h3>
-                        <p>
-                            Architected a framework-agnostic plugin system enabling seamless integration 
-                            of React, Vue, and Angular components using Micro Frontend architecture.
-                        </p>
-                        <div class="project-highlights">
-                            <span><i class="fas fa-check"></i> Framework Agnostic</span>
-                            <span><i class="fas fa-check"></i> Micro Frontend Architecture</span>
-                            <span><i class="fas fa-check"></i> Seamless Integration</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3: Data Visualization Platform -->
-                <div class="project-card" data-category="angular react">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&sat=-100" alt="Data Visualization">
-                        <div class="project-overlay">
-                            <button class="btn-icon" onclick="openProjectModal('project3')">
-                                <i class="fas fa-external-link-alt"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
+                            <span>Vue.js</span>
+                            <span>TypeScript</span>
+                            <span>Micro Frontends</span>
                             <span>D3.js</span>
-                            <span>Data Viz</span>
-                            <span>Angular</span>
+                            <span>Vite</span>
+                            <span>Stencil</span>
                         </div>
-                        <h3>Interactive Data Visualization</h3>
-                        <p>
-                            Developed interactive data visualization features that increased user engagement 
-                            by 40% and reduced analysis time by 55%.
-                        </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <strong>40%</strong>
-                                <span>Engagement ↑</span>
-                            </div>
-                            <div class="metric">
-                                <strong>55%</strong>
-                                <span>Time Saved</span>
-                            </div>
+    
+                        <div class="project-links">
+                            <a href="https://eda.sw.siemens.com/en-US/ic/questa-one/verification-iq/" target="_blank"
+                                class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> View Product
+                            </a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project 4: Angular Migration -->
-                <div class="project-card" data-category="angular performance">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=800&fit=crop" alt="Angular Migration">
+    
+                <!-- Featured Project 2: Coverage Analyzer Migration -->
+                <div class="featured-project reverse" data-category="professional">
+                    <div class="featured-project-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=800&fit=crop"
+                            alt="Coverage Analyzer">
                         <div class="project-overlay">
-                            <button class="btn-icon" onclick="openProjectModal('project4')">
+                            <div class="overlay-content">
                                 <i class="fas fa-external-link-alt"></i>
-                            </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-content">
+    
+                    <div class="featured-project-content">
+                        <div class="project-labels">
+                            <span class="label-badge professional">Siemens Digital Industries</span>
+                            <span class="label-badge">Angular Migration</span>
+                        </div>
+    
+                        <h4 class="featured-project-title">Coverage Analyzer - Angular 2 to 18 Migration</h4>
+    
+                        <p class="featured-project-description">
+                            Successfully migrated a critical enterprise application from Angular 2 to Angular 18 with zero
+                            functionality
+                            compromises and zero data loss. Implemented critical performance enhancements and modern best
+                            practices.
+                        </p>
+    
+                        <div class="project-achievements-grid">
+                            <div class="achievement-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>0% functionality loss</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-database"></i>
+                                <span>0% data loss</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>Critical performance gains</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>100% code coverage</span>
+                            </div>
+                        </div>
+    
                         <div class="project-tags">
                             <span>Angular 18</span>
-                            <span>Migration</span>
-                            <span>Performance</span>
+                            <span>TypeScript</span>
+                            <span>RxJS</span>
+                            <span>Jasmine</span>
+                            <span>Karma</span>
                         </div>
-                        <h3>Coverage Analyzer Migration</h3>
-                        <p>
-                            Successfully migrated Coverage Analyzer from Angular 2 to Angular 18 with 
-                            zero data loss and critical performance enhancements.
-                        </p>
-                        <div class="project-highlights">
-                            <span><i class="fas fa-check"></i> 0% Data Loss</span>
-                            <span><i class="fas fa-check"></i> Performance Enhanced</span>
-                            <span><i class="fas fa-check"></i> Angular 2 → 18</span>
+    
+                        <div class="project-links">
+                            <a href="https://eda.sw.siemens.com/en-US/ic/questa-one/verification-iq/" target="_blank"
+                                class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> View Product
+                            </a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project 5: ERP System -->
-                <div class="project-card" data-category="react">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop" alt="ERP System">
+    
+                <!-- Featured Project 3: Ducky AI Job Assistant -->
+                <div class="featured-project" data-category="opensource tools">
+                    <div class="featured-project-image">
+                        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=800&fit=crop"
+                            alt="Ducky AI">
                         <div class="project-overlay">
-                            <button class="btn-icon" onclick="openProjectModal('project5')">
+                            <div class="overlay-content">
                                 <i class="fas fa-external-link-alt"></i>
-                            </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-content">
+    
+                    <div class="featured-project-content">
+                        <div class="project-labels">
+                            <span class="label-badge opensource">Open Source</span>
+                            <span class="label-badge">September 2025</span>
+                        </div>
+    
+                        <h4 class="featured-project-title">Ducky - AI-Powered Job Application Assistant</h4>
+    
+                        <p class="featured-project-description">
+                            A comprehensive Chrome Extension that automates job applications with AI-powered matching and
+                            smart filtering
+                            across multiple job platforms. Streamlines the job search process with intelligent automation.
+                        </p>
+    
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>Chrome Extension API</span>
+                            <span>AI Integration</span>
+                            <span>Automation</span>
+                        </div>
+    
+                        <div class="project-links">
+                            <a href="https://github.com/kariamyasser/Ducky" target="_blank" class="btn btn-primary">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- All Projects Grid -->
+            <div class="all-projects-section">
+                <h3 class="subsection-title">
+                    <i class="fas fa-folder-open"></i> All Projects
+                </h3>
+    
+                <div class="projects-grid">
+                    <!-- MDC ERP System -->
+                    <div class="project-card" data-category="professional">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="project-badges">
+                                <span class="badge professional">MDC</span>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">ERP System</h5>
+    
+                        <p class="project-card-description">
+                            Complete ERP system delivered on time and under budget with 100% bug-free launch,
+                            resulting in 20% efficiency increase.
+                        </p>
+    
+                        <div class="project-card-stats">
+                            <div class="stat-item-small">
+                                <i class="fas fa-check-circle"></i>
+                                <span>100% Bug-Free</span>
+                            </div>
+                            <div class="stat-item-small">
+                                <i class="fas fa-chart-line"></i>
+                                <span>20% Efficiency ↑</span>
+                            </div>
+                        </div>
+    
                         <div class="project-tags">
                             <span>React</span>
                             <span>Redux</span>
-                            <span>ERP</span>
+                            <span>JavaScript</span>
                         </div>
-                        <h3>Enterprise ERP System</h3>
-                        <p>
-                            Built a comprehensive ERP system using React and Redux, delivered on time 
-                            with 100% bug-free launch and 20% efficiency increase.
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> Jun 2021 - Mar 2022
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- Microfilm Search Engine -->
+                    <div class="project-card" data-category="professional opensource">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/MicrofilmSearchEngine" target="_blank"
+                                    class="icon-link" title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">Microfilm Search Engine</h5>
+    
+                        <p class="project-card-description">
+                            Archive search engine for organizing microfilm scans with browse, edit, print, and PDF export
+                            capabilities.
                         </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <strong>100%</strong>
-                                <span>Bug-Free</span>
-                            </div>
-                            <div class="metric">
-                                <strong>20%</strong>
-                                <span>Efficiency ↑</span>
-                            </div>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-file-pdf"></i> PDF Export</span>
+                            <span><i class="fas fa-print"></i> Print Support</span>
+                            <span><i class="fas fa-edit"></i> Edit Mode</span>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6: Chrome Extension -->
-                <div class="project-card" data-category="performance">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=800&fit=crop" alt="Chrome Extension">
-                        <div class="project-overlay">
-                            <button class="btn-icon" onclick="openProjectModal('project6')">
-                                <i class="fas fa-external-link-alt"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-content">
+    
                         <div class="project-tags">
-                            <span>Chrome Extension</span>
-                            <span>Performance</span>
-                            <span>DevTools</span>
+                            <span>Angular</span>
+                            <span>Node.js</span>
+                            <span>TypeScript</span>
                         </div>
-                        <h3>API Performance Monitor</h3>
-                        <p>
-                            Developed a Chrome extension to detect and report redundant API calls during 
-                            development and testing, improving application efficiency.
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> August 2023
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- Ministry Integration Portal -->
+                    <div class="project-card" data-category="professional">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <div class="project-badges">
+                                <span class="badge government">Government</span>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">Ministry Integration Portal</h5>
+    
+                        <p class="project-card-description">
+                            Frontend for integrating Ministry of Tourism with Ministry of Internal Affairs working cycle.
                         </p>
-                        <div class="project-highlights">
-                            <span><i class="fas fa-check"></i> Real-time Detection</span>
-                            <span><i class="fas fa-check"></i> Developer Tool</span>
-                            <span><i class="fas fa-check"></i> Performance Insights</span>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-sync"></i> Real-time Sync</span>
+                            <span><i class="fas fa-shield-alt"></i> Secure</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>Angular</span>
+                            <span>TypeScript</span>
+                            <span>REST APIs</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> Jun - Oct 2019
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- Duplicate Requests Extension -->
+                    <div class="project-card" data-category="opensource tools">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/Duplicate-Requests-Chrome-Extension"
+                                    target="_blank" class="icon-link" title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <span class="badge opensource">MIT</span>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">Duplicate Requests Detector</h5>
+    
+                        <p class="project-card-description">
+                            Chrome extension to detect and log duplicate API requests in real-time for performance
+                            optimization.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-bolt"></i> Real-time Detection</span>
+                            <span><i class="fas fa-chart-bar"></i> Analytics</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>Chrome API</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> February 2025
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- Marketplace -->
+                    <div class="project-card" data-category="opensource">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/marketplace" target="_blank" class="icon-link"
+                                    title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">Marketplace</h5>
+    
+                        <p class="project-card-description">
+                            E-commerce marketplace application with modern web technologies and responsive design.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-shopping-bag"></i> Shopping Cart</span>
+                            <span><i class="fas fa-credit-card"></i> Payments</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>TypeScript</span>
+                            <span>Next.js</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> July 2025
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- Interstellar Portfolio -->
+                    <div class="project-card" data-category="opensource">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/interstellar-portfolio" target="_blank"
+                                    class="icon-link" title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">Interstellar Portfolio</h5>
+    
+                        <p class="project-card-description">
+                            Personal portfolio website with space-themed design and smooth animations.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-star"></i> Animations</span>
+                            <span><i class="fas fa-mobile-alt"></i> Responsive</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> April 2025
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- Interactive Resume -->
+                    <div class="project-card" data-category="opensource">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/Interactive-Resume" target="_blank"
+                                    class="icon-link" title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">Interactive Resume</h5>
+    
+                        <p class="project-card-description">
+                            Interactive web-based resume with modern animations and professional UI design.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-download"></i> Downloadable</span>
+                            <span><i class="fas fa-print"></i> Print Ready</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>SCSS</span>
+                            <span>HTML</span>
+                            <span>JavaScript</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> August 2023
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- Angular Templates -->
+                    <div class="project-card" data-category="opensource">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fab fa-angular"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/AngularTemplates" target="_blank" class="icon-link"
+                                    title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">Angular Templates</h5>
+    
+                        <p class="project-card-description">
+                            Collection of reusable Angular component and page templates for Angular 12+.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-cubes"></i> Reusable</span>
+                            <span><i class="fas fa-code"></i> Well Documented</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>Angular</span>
+                            <span>TypeScript</span>
+                            <span>HTML</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> August 2023
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- TLS Appointment Checker -->
+                    <div class="project-card" data-category="opensource tools">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/TLS-Appointment-Checker" target="_blank"
+                                    class="icon-link" title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">TLS Appointment Checker</h5>
+    
+                        <p class="project-card-description">
+                            Automated appointment checker with notification system for TLS Contact.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-bell"></i> Notifications</span>
+                            <span><i class="fas fa-robot"></i> Automated</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Automation</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> May 2025
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- Backend Server Pooling -->
+                    <div class="project-card" data-category="opensource tools">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/Backend-Server-Pooling" target="_blank"
+                                    class="icon-link" title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">Backend Server Pooling</h5>
+    
+                        <p class="project-card-description">
+                            Template project to initiate any backend server with connection pooling.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-database"></i> Connection Pool</span>
+                            <span><i class="fas fa-cogs"></i> Configurable</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>Node.js</span>
+                            <span>JavaScript</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> December 2022
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- Music Player -->
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/MusicPlayer" target="_blank" class="icon-link"
+                                    title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">Music Player</h5>
+    
+                        <p class="project-card-description">
+                            Cross-platform music player for Android & iOS built with Flutter.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fab fa-android"></i> Android</span>
+                            <span><i class="fab fa-apple"></i> iOS</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> August 2023
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- chat-X-Flutter -->
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/chat-X-Flutter" target="_blank" class="icon-link"
+                                    title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">chat-X-Flutter</h5>
+    
+                        <p class="project-card-description">
+                            One-to-one chat application with real-time messaging using Firebase.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-bolt"></i> Real-time</span>
+                            <span><i class="fas fa-cloud"></i> Cloud Sync</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Dart</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> August 2023
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- TEDx-CU -->
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/TEDx-CU" target="_blank" class="icon-link"
+                                    title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">TEDx Cairo University</h5>
+    
+                        <p class="project-card-description">
+                            Official mobile application for TEDx Cairo University events.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-calendar-alt"></i> Event Schedule</span>
+                            <span><i class="fas fa-users"></i> Networking</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> August 2023
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- AutoGradeFiller -->
+                    <div class="project-card" data-category="datascience">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-table"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/AutoGradeFiller" target="_blank" class="icon-link"
+                                    title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">AutoGradeFiller</h5>
+    
+                        <p class="project-card-description">
+                            Python script using OCR to extract table data from photos and export to Excel.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-camera"></i> OCR</span>
+                            <span><i class="fas fa-file-excel"></i> Excel Export</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>OCR</span>
+                            <span>Pandas</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> August 2023
+                            </span>
+                        </div>
+                    </div>
+    
+                    <!-- BigData-AirbnbDataset -->
+                    <div class="project-card" data-category="datascience">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="project-badges">
+                                <a href="https://github.com/kariamyasser/BigData-AirbnbDataset" target="_blank"
+                                    class="icon-link" title="View on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <h5 class="project-card-title">Airbnb Data Analysis</h5>
+    
+                        <p class="project-card-description">
+                            Analysis of Airbnb dataset with prediction models and visualizations.
+                        </p>
+    
+                        <div class="project-card-features">
+                            <span><i class="fas fa-brain"></i> ML Models</span>
+                            <span><i class="fas fa-chart-pie"></i> Visualizations</span>
+                        </div>
+    
+                        <div class="project-tags">
+                            <span>R</span>
+                            <span>ML</span>
+                            <span>Visualization</span>
+                        </div>
+    
+                        <div class="project-card-footer">
+                            <span class="project-date">
+                                <i class="far fa-calendar"></i> August 2023
+                            </span>
                         </div>
                     </div>
                 </div>
+            </div>
+    
+            <!-- View More Button -->
+            <div class="view-more-container">
+                <a href="https://github.com/kariamyasser" target="_blank" class="btn btn-primary btn-large">
+                    <i class="fab fa-github"></i> View All on GitHub
+                </a>
             </div>
         </div>
     </section>
@@ -1167,6 +1794,20 @@
                 </div>
                 
                 <form class="contact-form" id="contactForm">
+                    <!-- Web3Forms Access Key - REPLACE WITH YOUR KEY -->
+                    <input type="hidden" name="access_key" value="187cb628-bc6b-4b74-a394-72a21efece90">
+                    
+                    <!-- Optional: Custom subject line -->
+                    <input type="hidden" name="subject" value="New Contact from Portfolio Website">
+
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+
+                    <!-- Optional: Redirect after submission (leave blank for no redirect) -->
+                    <input type="hidden" name="redirect" value="">
+                    
+                    <!-- Honeypot for spam protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" required>
