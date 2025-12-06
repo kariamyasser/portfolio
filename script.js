@@ -452,9 +452,6 @@ if (contactForm) {
             return;
         }
         
-        // Add access key from config
-        formData.append('access_key', CONFIG.WEB3FORMS_ACCESS_KEY);
-        
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
         
