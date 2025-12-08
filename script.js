@@ -198,12 +198,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===================================
-// PROJECT FILTERS - ENHANCED
+// HIDE FEATURED PROJECTS IF EMPTY
 // ===================================
 
+function checkFeaturedProjects() {
+    const featuredSection = document.getElementById('featured-projects-section');
+    if (featuredSection) {
+        const featuredProjects = featuredSection.querySelectorAll('.featured-project, .main-project-container');
+        
+        if (featuredProjects.length === 0) {
+            featuredSection.style.display = 'none';
+        } else {
+            featuredSection.style.display = 'block';
+        }
+    }
+}
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', checkFeaturedProjects);
+
+// Update PROJECT FILTERS to also check featured section visibility
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 const featuredProjects = document.querySelectorAll('.featured-project');
+const mainProjectContainers = document.querySelectorAll('.main-project-container');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -251,6 +269,28 @@ filterButtons.forEach(button => {
                 }, 300);
             }
         });
+        
+        // Filter main project containers
+        mainProjectContainers.forEach(container => {
+            const categories = container.getAttribute('data-category').split(' ');
+            
+            if (filterValue === 'all' || categories.includes(filterValue)) {
+                container.style.display = 'block';
+                setTimeout(() => {
+                    container.style.opacity = '1';
+                    container.style.transform = 'translateY(0)';
+                }, 10);
+            } else {
+                container.style.opacity = '0';
+                container.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    container.style.display = 'none';
+                }, 300);
+            }
+        });
+        
+        // Check if featured section should be visible after filtering
+        setTimeout(checkFeaturedProjects, 350);
         
         // Track filter change in analytics
         if (typeof gtag !== 'undefined') {
