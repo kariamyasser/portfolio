@@ -1,0 +1,14 @@
+@font-face {
+    font-family: S1;
+    src: url(../../fonts/spaceport_2006/Spaceport_2006.otf);
+  }
+
+  @font-face {
+    font-family: S3;
+    src: url(../../fonts/outer_space2/Outer\ Space.ttf);
+  }
+
+  @font-face {
+    font-family: S13;
+    src: url(../../fonts/the_wastes_of_space/The\ Wastes\ of\ Space.otf);
+  }

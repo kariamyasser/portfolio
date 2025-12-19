@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Kareem Gabr - Senior Frontend Engineer specializing in Angular, React, and modern web applications">
+  <link rel="stylesheet" href="media/css/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="media/css/fonts.css">
+  <link rel="stylesheet" href="media/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="./media/logo.svg" type="image/icon type">
+  <title>Kareem Gabr - Senior Frontend Engineer</title>
+</head>
+
+<body>
+  <!-- Parallax Background Layer -->
+  <div id="background-wrapper">
+    <div id="background-layer"></div>
+    <canvas id="stars-layer-1"></canvas>
+    <canvas id="stars-layer-2"></canvas>
+    <canvas id="stars-layer-3"></canvas>
+  </div>
+
+  <!-- Audio Player -->
+  <audio id="player" loop>
+    <source src="./media/audio/Cornfield-chase-interstellar.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Mobile Navigation Controls -->
+  <div class="mobile-nav-controls">
+    <button id="nav-prev" class="nav-button nav-prev" aria-label="Move Left">
+      <i class="fa fa-chevron-left"></i>
+    </button>
+    <button id="nav-next" class="nav-button nav-next" aria-label="Move Right">
+      <i class="fa fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Spaceship -->
+  <img id="space-ship" src="media/ship/giphy.gif" alt="Spaceship Navigator">
+
+  <!-- Sections Container -->
+  <div id="sections-container">
+    
+    <!-- Section 1: Welcome -->
+    <section id="section-1" class="section">
+      <img class="planet section1-planet1" src="media/planets/aurora.png" alt="Aurora Planet">
+      <img class="planet section1-planet2" src="media/planets/gifs/2.gif" alt="Animated Planet">
+      <img class="planet section1-planet3" src="media/planets/gifs/15.gif" alt="Animated Planet">
+      <img class="planet section1-planet4" src="media/planets/gifs/43.gif" alt="Animated Planet">
+      <img class="planet section1-planet5" src="media/planets/gifs/41.gif" alt="Animated Planet">
+      
+      <h1 class="welcome-title">WELCOME!</h1>
+      <h2 class="section1-welcome-instructions">USE ARROWS TO NAVIGATE</h2>
+      <img class="planet section1-arrow1" src="media/arrows/giphy (7).gif" alt="Navigation Arrow">
+
+      <div class="audio-player-container">
+        <h2 class="audio-player-text">For best experience play the sound</h2>
+        <button id="audio-player-button" type="button" aria-label="Play/Pause Audio">
+          <i class="fa fa-play"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Section 2: About & Profile -->
+    <section id="section-2" class="section">
+      <img class="planet section2-planet1" src="media/planets/gifs/7.gif" alt="Animated Planet">
+      <img class="planet section2-planet2" src="media/planets/gifs/19.gif" alt="Animated Planet">
+      <img class="planet section2-planet3" src="media/planets/gifs/22.gif" alt="Animated Planet">
+      
+      <h1 class="page-title">About Me</h1>
+      
+      <div class="section2-container">
+        <div class="section2-profile-card">
+          <div class="profile-header">
+            <h2 class="profile-name">Kareem Gabr</h2>
+            <h3 class="profile-role">
+              <i class="fa fa-angle-double-left"></i>
+              Senior Frontend Engineer
+              <i class="fa fa-angle-double-right"></i>
+            </h3>
+            <p class="profile-intro">
+              Passionate Frontend Engineer with <strong>5+ years of experience</strong> specializing in
+              Angular, React, and modern web technologies. Currently at <strong>Siemens Digital Industries
+                Software</strong>, leading architectural improvements and driving innovation.
+            </p>
+          </div>
+
+          <div class="profile-content">
+            <div class="profile-stats">
+              <div class="stat-box">
+                <div class="stat-icon">
+                  <i class="fa fa-rocket"></i>
+                </div>
+                <div class="stat-content">
+                  <h4>90%</h4>
+                  <p>Build Time Reduction</p>
+                </div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-icon">
+                  <i class="fa fa-users"></i>
+                </div>
+                <div class="stat-content">
+                  <h4>40%</h4>
+                  <p>User Engagement Increase</p>
+                </div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-icon">
+                  <i class="fa fa-shield"></i>
+                </div>
+                <div class="stat-content">
+                  <h4>100%</h4>
+                  <p>Code Coverage</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa fa-envelope"></i>
+              <a href="mailto:karim.yasser.ahmed@gmail.com">karim.yasser.ahmed@gmail.com</a>
+            </div>
+            <div class="contact-grid">
+            
+              <div class="contact-item">
+                <i class="fa fa-mobile"></i>
+                <span>+201141913988</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <span>Cairo, Egypt</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-linkedin-square"></i>
+                <a href="https://www.linkedin.com/in/kareem-gabr-36a80119b/" target="_blank">LinkedIn</a>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-github"></i>
+                <a href="https://github.com/kariamyasser" target="_blank">GitHub</a>
+              </div>
+            </div>
+
+            <div class="languages-section">
+              <h4><i class="fa fa-globe"></i> Languages</h4>
+              <div class="language-tags">
+                <span>🇬🇧 English - Bilingual</span>
+                <span>🇪🇬 Arabic - Native</span>
+                <span>🇫🇷 French - Conversational</span>
+                <span>🇯🇵 Japanese - N5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Skills -->
+    <section id="section-3" class="section">
+      <img class="planet section3-planet1" src="media/planets/gifs/44.gif" alt="Animated Planet">
+      <img class="planet section3-planet2" src="media/planets/gifs/17.gif" alt="Animated Planet">
+      <img class="planet section3-planet3" src="media/planets/gifs/8.gif" alt="Animated Planet">
+
+      <h1 class="page-title">Skills & Technologies</h1>
+
+      <!-- Honeycomb Grid -->
+      <div class="honeycomb-container">
+        <!-- Row 1: Frontend Frameworks & Core Languages (6 hexagons) -->
+        <div class="honeycomb-row row-1">
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-angularjs-plain colored" style="font-size: 48px;"></i>
+              <span>Angular</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-react-original colored" style="font-size: 48px;"></i>
+              <span>React</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-nextjs-original" style="font-size: 48px;"></i>
+              <span>Next.js</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-vuejs-plain colored" style="font-size: 48px;"></i>
+              <span>Vue.js</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-typescript-plain colored" style="font-size: 48px;"></i>
+              <span>TypeScript</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-javascript-plain colored" style="font-size: 48px;"></i>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Languages & State Management (7 hexagons) -->
+        <div class="honeycomb-row row-2">
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-html5-plain colored" style="font-size: 48px;"></i>
+              <span>HTML5</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-css3-plain colored" style="font-size: 48px;"></i>
+              <span>CSS3</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-sass-original colored" style="font-size: 48px;"></i>
+              <span>SASS/SCSS</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-redux-original colored" style="font-size: 48px;"></i>
+              <span>Redux</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <img height="48px" width="48px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rxjs/rxjs-original.svg" alt="RxJS">
+              <span>RxJS</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="fas fa-database" style="font-size: 48px; color: #BA2BD2;"></i>
+              <span>NgRx</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="fas fa-sync-alt" style="font-size: 48px; color: #FF4154;"></i>
+              <span>React Query</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Styling, UI & Testing (6 hexagons) -->
+        <div class="honeycomb-row row-3">
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-tailwindcss-plain colored" style="font-size: 48px;"></i>
+              <span>Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-bootstrap-plain colored" style="font-size: 48px;"></i>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-materialui-plain colored" style="font-size: 48px;"></i>
+              <span>Material UI</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-jest-plain colored" style="font-size: 48px;"></i>
+              <span>Jest</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-jasmine-plain colored" style="font-size: 48px;"></i>
+              <span>Jasmine</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-storybook-plain colored" style="font-size: 48px;"></i>
+              <span>Storybook</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4: DevOps, Tools & Backend (7 hexagons) -->
+        <div class="honeycomb-row row-2">
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-git-plain colored" style="font-size: 48px;"></i>
+              <span>Git</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-docker-plain colored" style="font-size: 48px;"></i>
+              <span>Docker</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-jenkins-plain colored" style="font-size: 48px;"></i>
+              <span>Jenkins</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-webpack-plain colored" style="font-size: 48px;"></i>
+              <span>Webpack</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-nginx-original colored" style="font-size: 48px;"></i>
+              <span>Nginx</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-nodejs-plain colored" style="font-size: 48px;"></i>
+              <span>Node.js</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-python-plain colored" style="font-size: 48px;"></i>
+              <span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 5: Cloud, Databases & Design (6 hexagons) -->
+        <div class="honeycomb-row row-3">
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-googlecloud-plain colored" style="font-size: 48px;"></i>
+              <span>GCP</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-postgresql-plain colored" style="font-size: 48px;"></i>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-mysql-plain colored" style="font-size: 48px;"></i>
+              <span>MySQL</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-graphql-plain colored" style="font-size: 48px;"></i>
+              <span>GraphQL</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="devicon-figma-plain colored" style="font-size: 48px;"></i>
+              <span>Figma</span>
+            </div>
+          </div>
+          <div class="hexagon">
+            <div class="hexagon-content">
+              <i class="fas fa-universal-access" style="font-size: 48px; color: #0066CC;"></i>
+              <span>Accessibility</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Experience Timeline (HORIZONTAL) -->
+    <section id="section-4" class="section">
+      <img class="planet section4-planet1" src="media/planets/gifs/13.gif" alt="Animated Planet">
+      <img class="planet section4-planet2" src="media/planets/gifs/24.gif" alt="Animated Planet">
+      <img class="planet section4-planet3" src="media/experience/pngwing.com.png" alt="Siemens Logo">
+      <img class="planet section4-planet4" src="media/experience/giphy (7).gif" alt="Animated Planet">
+
+      <h1 class="page-title">Professional Journey</h1>
+
+      <div class="timeline-wave">
+        <!-- Timeline Line -->
+        <div class="timeline-wave-line"></div>
+
+        <!-- Siemens - TOP -->
+        <div class="timeline-wave-item timeline-top">
+          <div class="timeline-wave-card">
+            <div class="timeline-year">2020 - Present</div>
+            <h3>Senior Frontend Engineer</h3>
+            <h4>Siemens Digital Industries</h4>
+            <p class="timeline-location"><i class="fa fa-map-marker"></i> Cairo, Egypt</p>
+            
+            <ul class="timeline-highlights">
+              <li>VIQ Framework Angular 2 → 18 migration</li>
+              <li><strong>90%</strong> build time reduction</li>
+              <li><strong>40%</strong> user engagement increase</li>
+              <li><strong>100%</strong> code coverage achieved</li>
+            </ul>
+
+            <div class="timeline-tech">
+              <span>Angular</span>
+              <span>React</span>
+              <span>Vue.js</span>
+              <span>TypeScript</span>
+            </div>
+          </div>
+          <div class="timeline-wave-dot"></div>
+          <div class="timeline-connector"></div>
+        </div>
+
+        <!-- Freelance - BOTTOM -->
+        <div class="timeline-wave-item timeline-bottom" style="top: -15%;">
+          <div class="timeline-connector"></div>
+          <div class="timeline-wave-dot"></div>
+          <div class="timeline-wave-card">
+            <div class="timeline-year">2021 - 2022</div>
+            <h3>Freelance Frontend Engineer</h3>
+            <h4>MDC</h4>
+            <p class="timeline-location"><i class="fa fa-map-marker"></i> Cairo, Egypt</p>
+            
+            <ul class="timeline-highlights">
+              <li>Led team of 4 developers</li>
+              <li>100% bug-free ERP launch</li>
+              <li>20% efficiency increase</li>
+            </ul>
+
+            <div class="timeline-tech">
+              <span>React</span>
+              <span>Redux</span>
+              <span>Node.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITSC - TOP -->
+        <div class="timeline-wave-item timeline-top" style="top: -10%;">
+          <div class="timeline-wave-card">
+            <div class="timeline-year">2019</div>
+            <h3>Full Stack Intern</h3>
+            <h4>ITSC - Egypt</h4>
+            <p class="timeline-location"><i class="fa fa-map-marker"></i> Cairo, Egypt</p>
+            
+            <ul class="timeline-highlights">
+              <li>Government portal integration</li>
+              <li>Design pattern implementation</li>
+              <li>Modular SPA development</li>
+            </ul>
+
+            <div class="timeline-tech">
+              <span>Angular</span>
+              <span>.NET Core</span>
+            </div>
+          </div>
+          <div class="timeline-wave-dot"></div>
+          <div class="timeline-connector"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Featured Projects -->
+    <section id="section-5" class="section">
+      <img class="planet section5-planet1" src="media/planets/gifs/14.gif" alt="Animated Planet">
+      <img class="planet section5-planet2" src="media/planets/gifs/34.gif" alt="Animated Planet">
+      <img class="planet section5-planet3" src="media/planets/gifs/10.gif" alt="Animated Planet">
+
+      <h1 class="page-title">Featured Projects</h1>
+
+      <div class="projects-grid">
+        <!-- Main Project - Full Width -->
+        <div class="project-card featured-project">
+          <div class="project-header">
+            <h3>Questa One Verification IQ</h3>
+            <p class="project-company">Siemens Digital Industries Software</p>
+          </div>
+
+          <p class="project-description">
+            Collaborative, data-driven verification solution transforming the verification 
+            process using AI/ML, analytics, and traceability across multiple integrated tools.
+          </p>
+
+          <div class="project-metrics">
+            <div class="metric">
+              <i class="fa fa-tachometer-alt"></i>
+              <span>90% Build Time ↓</span>
+            </div>
+            <div class="metric">
+              <i class="fa fa-compress"></i>
+              <span>73% Bundle Size ↓</span>
+            </div>
+            <div class="metric">
+              <i class="fa fa-users"></i>
+              <span>40% Engagement ↑</span>
+            </div>
+          </div>
+
+          <div class="project-tags">
+            <span>Angular</span>
+            <span>React</span>
+            <span>Vue.js</span>
+            <span>Micro Frontends</span>
+            <span>D3.js</span>
+          </div>
+
+          <a href="https://eda.sw.siemens.com/en-US/ic/questa-one/verification-iq/" target="_blank" class="project-link">
+            <i class="fa fa-external-link"></i> View Platform
+          </a>
+        </div>
+
+        <!-- 3 Projects in One Row -->
+        <div class="projects-row">
+          <!-- Plugin Generator -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Cross-Framework Plugin Generator</h3>
+              <p class="project-company">Siemens</p>
+            </div>
+
+            <p class="project-description">
+              Revolutionary plugin system enabling seamless framework integration.
+            </p>
+
+            <div class="project-tags">
+              <span>Micro Frontends</span>
+              <span>React</span>
+              <span>Vue.js</span>
+              <span>Angular</span>
+            </div>
+          </div>
+
+          <!-- Ducky AI -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Ducky - AI Job Assistant</h3>
+              <p class="project-company">Open Source</p>
+            </div>
+
+            <p class="project-description">
+              AI-powered Chrome Extension automating job applications.
+            </p>
+
+            <div class="project-tags">
+              <span>JavaScript</span>
+              <span>Chrome Extension</span>
+              <span>AI</span>
+            </div>
+
+            <a href="https://github.com/kariamyasser/Ducky" target="_blank" class="project-link">
+              <i class="fa fa-github"></i> GitHub
+            </a>
+          </div>
+
+          <!-- Duplicate API Detector -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Duplicate API Detector</h3>
+              <p class="project-company">Open Source</p>
+            </div>
+
+            <p class="project-description">
+              Chrome extension for detecting redundant API calls.
+            </p>
+
+            <div class="project-tags">
+              <span>JavaScript</span>
+              <span>Performance</span>
+            </div>
+
+            <a href="https://github.com/kariamyasser/Duplicate-Requests-Chrome-Extension" target="_blank" class="project-link">
+              <i class="fa fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-footer">
+        <a href="https://github.com/kariamyasser" target="_blank" class="view-all-btn">
+          <i class="fa fa-github"></i> View All Projects on GitHub
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 6: Education & Certifications -->
+    <section id="section-6" class="section">
+      <img class="planet section6-planet1" src="media/planets/gifs/28.gif" alt="Animated Planet">
+      <img class="planet section6-planet2" src="media/planets/gifs/23.gif" alt="Animated Planet">
+      <img class="planet section6-planet3" src="media/planets/gifs/36.gif" alt="Animated Planet">
+
+      <h1 class="page-title">Education & Certifications</h1>
+
+      <div class="education-container">
+        <!-- Education -->
+        <div class="education-card">
+          <div class="edu-icon">
+            <i class="fa fa-graduation-cap"></i>
+          </div>
+          <div class="edu-content">
+            <h2>Bachelor of Communication and Computer Engineering</h2>
+            <h3>Cairo University, Faculty of Engineering</h3>
+            <div class="edu-meta">
+              <span><i class="fa fa-calendar"></i> Graduated June 2020</span>
+              <span><i class="fa fa-map-marker"></i> Giza, Egypt</span>
+              <span class="gpa"><i class="fa fa-star"></i> GPA: 3.3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications Grid -->
+        <div class="certifications-grid">
+          <div class="cert-card featured-cert">
+            <h4>
+              <div class="cert-badge">
+                <i class="fa fa-certificate"></i>
+              </div>
+              Generative AI with LLMs
+            </h4>
+            <p class="cert-issuer">DeepLearning.AI & AWS</p>
+            <div class="cert-tags">
+              <span>LLMs</span>
+              <span>Generative AI</span>
+              <span>AWS</span>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-date">Aug 2025</span>
+              <a href="https://coursera.org/verify/I8Z0UHAXWK2P" target="_blank" class="cert-verify">
+                <i class="fa fa-check-circle"></i> Verify
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <h4>
+              <div class="cert-badge">
+                <i class="fa fa-certificate"></i>
+              </div>
+              Generative AI for Everyone
+            </h4>
+            <p class="cert-issuer">DeepLearning.AI</p>
+            <div class="cert-tags">
+              <span>AI Fundamentals</span>
+              <span>Generative AI</span>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-date">Aug 2025</span>
+              <a href="https://coursera.org/verify/6528PHTU8N8C" target="_blank" class="cert-verify">
+                <i class="fa fa-check-circle"></i> Verify
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <h4>
+              <div class="cert-badge">
+                <i class="fa fa-paint-brush"></i>
+              </div>Web & Mobile Designer
+            </h4>
+            <p class="cert-issuer">Udemy</p>
+            <div class="cert-tags">
+              <span>UI/UX</span>
+              <span>Figma</span>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-date">Aug 2023</span>
+              <a href="https://ude.my/UC-44f06ecb-6126-4438-8122-01ec380efa9c" target="_blank" class="cert-verify">
+                <i class="fa fa-check-circle"></i> Verify
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <h4>
+              <div class="cert-badge">
+                <i class="fa fa-code"></i>
+              </div>Advanced Frontend Dev
+            </h4>
+            <p class="cert-issuer">Udacity</p>
+            <div class="cert-tags">
+              <span>React</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="cert-footer">
+              <span class="cert-date">Jan 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Navigation Script -->
+  <script src="media/js/navigation.js"></script>
+    
+  <!-- Star Particles Script -->
+  <script src="media/js/stars.js"></script>
+</body>
+</html>
