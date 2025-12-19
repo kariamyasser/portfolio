@@ -1,0 +1,14 @@
+name: Sync Gamify
+on:
+  workflow_dispatch:  # Run manually
+  schedule:
+    - cron: '0 0 * * *'  # Or run daily
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          git subtree pull --prefix gamify https://github.com/kariamyasser/gamify.git main --squash
+          git push
