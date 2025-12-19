@@ -302,30 +302,6 @@ filterButtons.forEach(button => {
 });
 
 // ===================================
-// SKILL LEVEL ANIMATION
-// ===================================
-
-const skillLevels = document.querySelectorAll('.skill-level');
-
-const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            skillObserver.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-skillLevels.forEach(level => {
-    skillObserver.observe(level);
-});
-
-// ===================================
 // SCROLL ANIMATIONS (GSAP)
 // ===================================
 
@@ -855,3 +831,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize any other components
     console.log('Portfolio initialized successfully! 🚀');
 });
+
+
+// ===================================
+// GAMIFY BUTTON TRACKING
+// ===================================
+
+const gamifyBtn = document.querySelector('.btn-gamify');
+
+if (gamifyBtn) {
+    gamifyBtn.addEventListener('click', (e) => {
+        // Track gamify button click in analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'click', {
+                'event_category': 'Navigation',
+                'event_label': 'Gamify Button Click',
+                'value': 1
+            });
+        }
+        
+        console.log('🎮 Redirecting to gamified portfolio...');
+    });
+}
